@@ -44,10 +44,10 @@ Return request_status and pass ir into request_status.html
 
 Pre-requisites: 
 
-1. Requires access to MYSQL database
-2. Requires the creation of a database named requests
-3. Requires the creation and activation of a virtual environment
-4. Requires the installation of modules in requrements.txt
+1. Requires access to MYSQL database.
+2. Requires the creation of a database named requests.
+3. Requires the creation and activation of a virtual environment.
+4. Requires the installation of modules in requrements.txt.
 
 Landing Page
 <img width="1284" alt="Screenshot 2023-02-12 at 8 04 01 PM" src="https://user-images.githubusercontent.com/73876124/218367827-4d7f3a08-0c11-4e8b-8d02-ca6a2d7af9ea.png">
