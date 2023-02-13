@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block title %}Holiday Requests{% endblock %}
+
+{% block header %}Holiday Requests{% endblock %}
+
+
+{% block content %}
+
+    <div class="container-fluid">
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{{ url_for('index') }}">Submit a Request</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('request_status') }}">Request Status</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('manager') }}">Manager Approvals</a>
+        </li>
+      </ul>
+    </div> 
+
+    <br/>
+    
+    <div class="container">
+
+      {% if error %}
+      <div class="alert alert-danger" role="alert">
+        {{ error }}
+      </div>
+      {% endif %}
+
+      {% if date_error %}
+      <div class="alert alert-warning" role="alert">
+        {{ date_error }}
+      </div>
+      {% endif %}
+
+      {% if other_error %}
+      <div class="alert alert-info" role="alert">
+        {{ other_error }}
+      </div>
+      {% endif %}
+
+      <h1 style="color: black">Request Details</h1>
+      <br/>
+      <div class="shadow p-3 mb-5 bg-body rounded">
+        <form class="row g-3" action="/submitted" method="POST">
+          <div class="col-md-6">
+            <label for="inputFirstName" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="inputFirstName" name="first_name" value="{{ first_name }}">
+          </div>
+          <div class="col-md-6">
+            <label for="inputLastName" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="inputLastName" name="last_name" value="{{ last_name }}">
+          </div>
+          <br/><br/><br/><br/>
+          <div class="col-12">
+            <label for="inputEmail" class="form-label">Email</label>
+            <input type="email" class="form-control" id="inputEmail" placeholder="1234@email.com" name="email" value="{{ email }}">
+          </div>
+          <br/><br/><br/><br/>
+          <div class="col-md-6">
+            <label for="inputStartDate" class="form-label">Start Date</label>
+            <input type="date" class="form-control" id="inputStartDate" name="start_date" value="{{ start_date }}">
+          </div>
+          <div class="col-md-6">
+            <label for="inputEndDate" class="form-label">End Date</label>
+            <input type="date" class="form-control" id="inputEndDate" name="end_date" value="{{ end_date }}">
+          </div>
+          <br/><br/><br/><br/>
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary">Submit Request</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+
+{% endblock %}

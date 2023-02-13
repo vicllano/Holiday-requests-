@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block title %}Request Update{% endblock %}
+
+{% block header %}Manager Approvals{% endblock %}
+
+{% block content %}
+
+
+    <div class="container-fluid">
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="{{ url_for('index') }}">Submit a Request</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('request_status') }}">Request Status</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="{{ url_for('manager') }}">Manager Approvals</a>
+        </li>
+      </ul>
+    </div> 
+
+    <br/>
+    
+    <div class="container">
+
+      {% if error %}
+      <div class="alert alert-danger" role="alert">
+        {{ error }}
+      </div>
+      {% endif %}
+
+      <h1 style="color: black">Request Details</h1>
+      <br/>
+      <table class="table table-striped table-hover table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Email</th> 
+            <th scope="col">Start Date</th>
+            <th scope="col">End Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{ first_name }}</td>
+            <td>{{ last_name }}</td>
+            <td>{{ email }}</td>
+            <td>{{ start_date }}</td>
+            <td>{{ end_date }}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <form class="row g-3" action="/approvals/{{update.id}}" method="POST">
+        <div class="col-md-6">
+          <label for="inputFirstName" class="form-label">Update Status:</label><br/>
+          <select class="custom-select" name="status" value="{{update.status}}" style="width:150px;">
+              <option>Pending</option>
+              <option>Approved</option>
+              <option>Declined</option>
+          </select>
+          <br/><br/>
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+
+    </div>
+
+
+{% endblock %}
