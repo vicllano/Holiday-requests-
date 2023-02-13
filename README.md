@@ -4,44 +4,6 @@ Purpose:
 
 The web app will receive holiday requests from employees, store them in a MYSQL database, query all holiday request records and present them to employees for view and managers for approval.
 
-Description: 
-
-Initialize the MYSQL database 
-Create database Model pto_requests
-Define pto_requests table columns
-Create the database pto_requests table within the application context
-Create route decorators
-Accept an Employee's name and other holiday request details from the form on index.html
-Create variables from form inputs
-Assign variables to the database table
-If form input values are missing
-	return error and pass it to index.html
-If start_date is greater than end_date 
-	return date_error and pass it to index.html
-If there is a problem adding to the database 
-	return other_error and pass it to index.html
-Else
-	Push record to database
-	Return confirmation and pass it to submitted.html
-
-Query all records in database table, order by date_created and store it in all_requests
-Return all_requests and pass it into manager.html
-
-When a record's update button is clicked in manager.html pass the record's id to the url
-Query record from database with the id passed from the url and store it in update
-create variables from the data stored in update 
-return variables and pass them into approvals.html
-When submit button is clicked assign update.status the new value from the form dropdown in approvals.html
-If there is a problem updating the database 
-	return string message
-Else
-	Push updated record to database
-	Query all records in database table, order by date_created and store it in all_requests
-	Return all_requests and confirmation and pass them into manager.html
-
-Query all records in database table, order by date_created and store it in request_status
-Return request_status and pass ir into request_status.html
-
 Pre-requisites: 
 
 1. Requires access to MYSQL database.
