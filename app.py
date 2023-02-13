@@ -82,7 +82,7 @@ def manager():
 # Update request status page
 @app.route("/approvals/<int:id>", methods=["POST", "GET"])
 def approvals(id):
-    # Query record from database with the id passed from the url
+    # Query record from database with the id passed from the url and assign to variables
     update = pto_requests.query.get_or_404(id)
     id = update.id
     date_created = update.date_created
