@@ -44,7 +44,7 @@ Return request_status and pass ir into request_status.html
 
 Pre-requisites: 
 
-1. Requires access to MYSQL
+1. Requires access to MYSQL database
 2. Requires the creation of a database named requests
 3. Requires the creation and activation of a virtual environment
 4. Requires the installation of modules in requrements.txt
