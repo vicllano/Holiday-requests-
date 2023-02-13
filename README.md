@@ -58,7 +58,7 @@ Request Submission Confirmation
 Manager Approval Page
 <img width="1286" alt="Screenshot 2023-02-12 at 8 10 20 PM" src="https://user-images.githubusercontent.com/73876124/218368551-e5719fb3-1187-4e51-a8c9-44b91319fa85.png">
 
-Status Update Page
+Request Status Update Page
 <img width="1279" alt="Screenshot 2023-02-12 at 8 13 39 PM" src="https://user-images.githubusercontent.com/73876124/218368905-3644f214-ffc9-402f-b3a4-be0aca2cc887.png">
 
 Update Succesful
@@ -70,7 +70,8 @@ All Fields Required Error
 Adjust Dates Error
 <img width="1285" alt="Screenshot 2023-02-12 at 8 17 12 PM" src="https://user-images.githubusercontent.com/73876124/218369290-4f56d24d-fc27-480b-9812-c7041323e439.png">
 
-
+Employee's Request Status Page
+<img width="1284" alt="Screenshot 2023-02-12 at 10 56 17 PM" src="https://user-images.githubusercontent.com/73876124/218391055-5ba7c8dd-e6e3-4fea-bf19-4e3bfeb030bc.png">
 
 
 
